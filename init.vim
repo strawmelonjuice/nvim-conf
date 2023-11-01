@@ -5,9 +5,12 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
+" Wakatime plugin
 Plug 'wakatime/vim-wakatime'
+" Catppuccin themes
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-
+" Discord rich presence
+Plug 'andweeb/presence.nvim'
 
 " List ends here. Plugins become visible to Vim after this call.
   " LSP Support
