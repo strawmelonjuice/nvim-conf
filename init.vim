@@ -9,8 +9,12 @@ Plug 'junegunn/seoul256.vim'
 Plug 'wakatime/vim-wakatime'
 " Catppuccin themes
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
 " Discord rich presence
 Plug 'andweeb/presence.nvim'
+
+" Navic
+Plug 'SmiteshP/nvim-navic'
 
 " List ends here. Plugins become visible to Vim after this call.
   " LSP Support
@@ -127,5 +131,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+local navic = require("nvim-navic")
 
+require("lspconfig").clangd.setup {
+    on_attach = function(client, bufnr)
+        navic.attach(client, bufnr)
+    end
+}
 EOF
