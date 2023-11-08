@@ -17,8 +17,6 @@ Plug 'andweeb/presence.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'nvim-tree/nvim-web-devicons'
-" Navic
-Plug 'SmiteshP/nvim-navic'
 
 " List ends here. Plugins become visible to Vim after this call.
   " LSP Support
@@ -204,26 +202,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-local navic = require("nvim-navic")
-
-local on_attach = function(client, bufnr)
-    if client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
-    end
-end
 require('lualine').setup()
 
-
-vim.o.statusline = "%{%v:lua.require'nvim-navic'.get_location()%}"
-
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-require("lspconfig").clangd.setup {
-    on_attach = function(client, bufnr)
-        navic.attach(client, bufnr)
-    end
-}
 lsp.setup()
 
 
