@@ -1,8 +1,7 @@
 set clipboard+=unnamedplus
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-
-" Declare the list of plugins.
+Plug 'stevearc/oil.nvim'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 " Wakatime plugin
@@ -207,5 +206,6 @@ require('lualine').setup()
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 lsp.setup()
 
+require("oil").setup()
 
 EOF
