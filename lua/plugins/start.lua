@@ -90,8 +90,6 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
         biome = {},
         rust_analyser = {},
       },
@@ -149,10 +147,8 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        "python",
-        "query",
+        "rust",
         "regex",
-        "tsx",
         "typescript",
         "vim",
         "yaml",
@@ -168,7 +164,6 @@ return {
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
-        "tsx",
         "typescript",
       })
     end,
@@ -205,10 +200,13 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "biome",
+        "clangd",
+        "prettier",
+        "rust_analyser",
+        "typescript-language-server",
         "stylua",
-        "shellcheck",
-        "shfmt",
-        "flake8",
+        "zls",
       },
     },
   },
