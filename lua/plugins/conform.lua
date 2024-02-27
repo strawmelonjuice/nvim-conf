@@ -16,7 +16,7 @@ return {
         ["markdown"] = { "prettier" },
         ["markdown.mdx"] = { "prettier" },
         ["graphql"] = { "prettier" },
-        -- ["handlebars"] = {""}
+        ["handlebars"] = {"prettier"}
       }
     }
   }
