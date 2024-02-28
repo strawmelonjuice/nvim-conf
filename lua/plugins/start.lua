@@ -91,7 +91,7 @@ return {
       ---@type lspconfig.options
       servers = {
         biome = {},
-        rust_analyser = {},
+        rust_analyzer = {},
       },
     },
   },
@@ -140,17 +140,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "bash",
-        "html",
         "javascript",
         "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
         "rust",
-        "regex",
         "typescript",
-        "vim",
         "yaml",
       },
     },
@@ -203,7 +196,7 @@ return {
         "biome",
         "clangd",
         "prettier",
-        "rust_analyser",
+        "rust-analyzer",
         "typescript-language-server",
         "stylua",
         "zls",
