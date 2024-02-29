@@ -1,3 +1,4 @@
 return {
-  { "andweeb/presence.nvim", name = "presence" },
+  { "andweeb/presence.nvim", name = "presence", lazy = true },
+  
 }
