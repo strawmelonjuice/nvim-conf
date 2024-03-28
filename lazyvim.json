@@ -5,10 +5,8 @@
     "lazyvim.plugins.extras.ui.edgy"
   ],
   "extras": [
-    "lazyvim.plugins.extras.editor.aerial",
     "lazyvim.plugins.extras.editor.leap",
     "lazyvim.plugins.extras.editor.navic",
-    "lazyvim.plugins.extras.editor.outline",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.clangd",
     "lazyvim.plugins.extras.lang.go",
@@ -18,10 +16,12 @@
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.util.project"
+    "lazyvim.plugins.extras.util.project",
+    "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.editor.outline"
   ],
   "news": {
-    "NEWS.md": "2123"
+    "NEWS.md": "2850"
   },
-  "version": 2
+  "version": 3
 }
