@@ -34,7 +34,7 @@ return {
         "rust-analyzer",
         "typescript-language-server",
         "stylua",
-        "zls",
+        "gopls",
       },
     },
   },
