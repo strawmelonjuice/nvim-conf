@@ -25,5 +25,5 @@ local function open_nvim_tree(data)
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-
-vim.api.nvim_create_autocmd("VimEnter", { callback = function() require "lazy".update() end })
+-- For now I see no reason to update the plugins everytime I open neovim
+-- vim.api.nvim_create_autocmd("VimEnter", { callback = function() require "lazy".update() end })
