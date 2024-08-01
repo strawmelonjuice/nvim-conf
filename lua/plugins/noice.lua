@@ -3,17 +3,14 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-      -- add any options here
 
       lsp = {
-        -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
           ["vim.lsp.util.stylize_markdown"] = true,
           ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
         },
       },
-      -- you can enable a preset for easier configuration
       presets = {
         command_palette = false,      -- position the cmdline and popupmenu together
         bottom_search = true,         -- use a classic bottom cmdline for search
@@ -23,13 +20,31 @@ return {
       },
 
     },
+    keys = {
+      {
+        "<leader>und",
+        function()
+          vim.cmd("NoiceDismiss")
+        end,
+        desc = "Dismiss All Notifications",
+      },
+      {
+        "<leader>unh",
+        function()
+          vim.cmd("NoiceHistory")
+        end,
+        desc = "Show message history"
+      }
+    },
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
+      --   Mar: I love mini, it doesn't ruin my workflow, it keeps out of the way... I love it. Keep nvim-notify disabled!
       -- "rcarriga/nvim-notify",
+      "hrsh7th/nvim-cmp"
     }
   }
 }
