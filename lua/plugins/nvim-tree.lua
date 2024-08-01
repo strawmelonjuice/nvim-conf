@@ -285,9 +285,26 @@ return {
       })
     end,
     keys = {
-      { "<C-\\>",    function() vim.cmd([[NvimTreeToggle]]) end,   mode = { "n", "t" },                    desc = "Toggle nvim-tree" },
-      { "<C-f>",     function() vim.cmd([[NvimTreeFindFile]]) end, desc = "Show current file in nvim-tree" },
-      { "<leader>e", function() vim.cmd([[NvimTreeToggle]]) end,   mode = { "n", "t" },                    desc = "Toggle nvim-tree" },
+      { "<C-\\>", function() vim.cmd([[NvimTreeToggle]]) end,   mode = { "n", "t" },                    desc = "Toggle nvim-tree" },
+      { "<C-f>",  function() vim.cmd([[NvimTreeFindFile]]) end, desc = "Show current file in nvim-tree" },
+      {
+        "<leader>e",
+        function()
+          vim.cmd([[NvimTreeToggle]])
+          vim.cmd([[NvimTreeCollapse]])
+        end,
+        mode = { "n", "t" },
+        desc = "Toggle collapsed nvim-tree"
+      },
     },
+  },
+  {
+    'kyazdani42/nvim-tree.lua',
+    dependencies = {
+      'b0o/nvim-tree-preview.lua',
+    },
+  },
+  {
+    'nvim-lua/plenary.nvim',
   },
 }
