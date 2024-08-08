@@ -285,7 +285,7 @@ return {
       })
     end,
     keys = {
-      { "<C-\\>", function() vim.cmd([[NvimTreeToggle]]) end,   mode = { "n", "t" },                    desc = "Toggle nvim-tree" },
+      { "<C-\\>", function() vim.cmd([[NvimTreeToggle]]) end,   mode = { "n", "t", "i", "v" },          desc = "Toggle nvim-tree" },
       { "<C-f>",  function() vim.cmd([[NvimTreeFindFile]]) end, desc = "Show current file in nvim-tree" },
       {
         "<leader>e",
