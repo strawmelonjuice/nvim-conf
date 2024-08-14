@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 local default_light = "peachpuff"
 -- local default_light = "rose-pine-dawn"
 -- local default_dark = "yellow-moon"
@@ -47,7 +48,7 @@ return {
   { "ellisonleao/gruvbox.nvim" },
   { "sts10/vim-pink-moon" },
   { "rktjmp/lush.nvim" },
-  { "Scysta/pink-panic.nvim" },
+  { "Scysta/pink-panic.nvim" }, { "savq/melange-nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
