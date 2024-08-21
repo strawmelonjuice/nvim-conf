@@ -5,5 +5,8 @@
     "param-type-mismatch",
     "missing-parameter"
   ],
-  "diagnostics.libraryFiles": "Disable"
+  "diagnostics.libraryFiles": "Disable",
+    "diagnostics.globals": [
+        "switch_between_outline_and_filetree"
+    ]
 }
