@@ -12,6 +12,10 @@ function switch_between_outline_and_filetree()
     vim.cmd([[Outline]])
     vim.cmd([[OutlineClose]])
     vim.cmd([[NvimTreeClose]])
+    local sec = tonumber(os.clock() + .5);
+    while (os.clock() < sec) do
+      -- Wait half a second so that the outline window can be closed
+    end
     if w == 1 then
       vim.cmd([[NvimTreeOpen]])
       w = 0
