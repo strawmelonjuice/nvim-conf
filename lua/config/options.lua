@@ -4,7 +4,7 @@
 
 vim.cmd.let 'mapleader = ","'
 
-vim.opt.relativenumber = false
+-- vim.opt.relativenumber = false
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
   callback = function()
