@@ -2,7 +2,8 @@ vim.opt.termguicolors = true
 local default_light = "peachpuff"
 -- local default_light = "rose-pine-dawn"
 -- local default_dark = "yellow-moon"
-local default_dark = "rose-pine-main"
+local default_dark = "fluoromachine"
+-- local default_dark = "rose-pine-main"
 
 local get_time_of_day = function()
   local hour = tonumber(os.date("%H"))
@@ -48,6 +49,22 @@ return {
   { "ellisonleao/gruvbox.nvim" },
   { "sts10/vim-pink-moon" },
   { "rktjmp/lush.nvim" },
+  {
+    'maxmx03/fluoromachine.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      local fm = require 'fluoromachine'
+
+      fm.setup {
+        glow = true,
+        theme = 'fluoromachine',
+        transparent = true,
+      }
+    end
+  }
+  ,
+  { "sainnhe/sonokai" },
   { "Scysta/pink-panic.nvim" }, { "savq/melange-nvim" },
   {
     "LazyVim/LazyVim",
